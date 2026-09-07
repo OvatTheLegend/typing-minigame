@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⚡ Terminal Velocity (Speed Typing Mini-App)
 
-## Getting Started
+> A fast-paced, retro hacker-themed terminal speed typing test built with modern **Next.js (App Router)**, **React**, **TypeScript**, and **Tailwind CSS**.
 
-First, run the development server:
+![License](https://img.shields.io/badge/license-MIT-emerald.svg)
+![React](https://img.shields.io/badge/React-19-blue.svg)
+![Next.js](https://img.shields.io/badge/Next.js-15-black.svg)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178c6.svg)
+![TailwindCSS](https://img.shields.io/badge/Tailwind-CSS-38bdf8.svg)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎮 Game Overview & Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **💻 Retro Hacker Terminal Aesthetic**: Dark monospace theme, neon emerald accents, and subtle glowing borders.
+- **🧠 Custom `useReducer` State Machine**: Deterministic game engine handling transitions between `IDLE`, `TYPING`, and `FINISHED` states across actions (`TYPE_CHAR`, `BACKSPACE`, `TICK_TIMER`, `SET_DURATION`, `RESTART`).
+- **📊 Real-time HUD Metrics**: Live countdown timer, live WPM (Words Per Minute), and live Accuracy %.
+- **🎨 Real-Time Character Feedback**:
+  - `Emerald Green`: Successfully typed characters.
+  - `Red with Underline`: Typos & mistakes.
+  - `Muted Zinc`: Unreached characters.
+  - `Gray Background Highlight`: Exact active character cursor tracking.
+- **📼 Typed History Memory Tape**: Retains past word error history across space submissions, enabling smooth multi-word backspacing.
+- **⏱️ Duration Config**: Choose between `15s`, `30s`, and `60s` test modes.
+- **🏁 Results Screen**: Summary metric cards for Net WPM, Accuracy %, Raw CPM (Characters Per Minute), and Error count with a quick restart action.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🧮 Standard Typing Formulas
 
-To learn more about Next.js, take a look at the following resources:
+- **Words Per Minute (WPM)**:
+  $$\text{WPM} = \frac{(\text{Correct Characters} / 5)}{\text{Time Elapsed in Minutes}}$$
+- **Accuracy (%)**:
+  $$\text{Accuracy} = \frac{\text{Correct Characters}}{\text{Total Typed Characters}} \times 100$$
+- **Characters Per Minute (CPM)**:
+  $$\text{CPM} = \frac{\text{Total Typed Characters}}{\text{Time Elapsed in Minutes}}$$
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠️ Architecture & Concepts Mastered
 
-## Deploy on Vercel
+- **Framework**: Next.js App Router
+- **Component Separation**:
+  - `TypingHeader.tsx`: Mode selectors, logo, and live stats HUD.
+  - `WordDisplay.tsx`: Word stream rendering, character color-coding, and cursor tracking.
+  - `ResultScreen.tsx`: 2x2 metric cards and test restart.
+  - `types.ts`: Discriminated action unions, game status, and state models.
+  - `words.ts`: Tech-themed word bank and randomizer utility.
+- **React Hooks**:
+  - `useReducer`: Full game logic and immutable state transitions.
+  - `useEffect`: Window `keydown` event listeners and interval countdown timers with cleanups.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 💻 Getting Started Locally
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/OvatTheLegend/speed-type.git
+   cd speed-type
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**:
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000/typing](http://localhost:3000/typing) in your browser.
+
+---
+
+## 👤 Author
+
+- **Richard** — [@OvatTheLegend](https://github.com/OvatTheLegend)
+- Student @ **FEI STU** (Slovak University of Technology in Bratislava)
