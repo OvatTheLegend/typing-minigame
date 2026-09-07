@@ -1,4 +1,4 @@
-# ⚡ Terminal Velocity (Speed Typing Mini-App)
+#  Terminal Velocity (Speed Typing Mini-App)
 
 > A fast-paced, retro hacker-themed terminal speed typing test built with modern **Next.js (App Router)**, **React**, **TypeScript**, and **Tailwind CSS**.
 
@@ -10,23 +10,23 @@
 
 ---
 
-## 🎮 Game Overview & Features
+##  Game Overview & Features
 
-- **💻 Retro Hacker Terminal Aesthetic**: Dark monospace theme, neon emerald accents, and subtle glowing borders.
-- **🧠 Custom `useReducer` State Machine**: Deterministic game engine handling transitions between `IDLE`, `TYPING`, and `FINISHED` states across actions (`TYPE_CHAR`, `BACKSPACE`, `TICK_TIMER`, `SET_DURATION`, `RESTART`).
-- **📊 Real-time HUD Metrics**: Live countdown timer, live WPM (Words Per Minute), and live Accuracy %.
-- **🎨 Real-Time Character Feedback**:
+- ** Retro Hacker Terminal Aesthetic**: Dark monospace theme, neon emerald accents, and subtle glowing borders.
+- ** Custom `useReducer` State Machine**: Deterministic game engine handling transitions between `IDLE`, `TYPING`, and `FINISHED` states across actions (`TYPE_CHAR`, `BACKSPACE`, `TICK_TIMER`, `SET_DURATION`, `RESTART`).
+- ** Real-time HUD Metrics**: Live countdown timer, live WPM (Words Per Minute), and live Accuracy %.
+- ** Real-Time Character Feedback**:
   - `Emerald Green`: Successfully typed characters.
   - `Red with Underline`: Typos & mistakes.
   - `Muted Zinc`: Unreached characters.
   - `Gray Background Highlight`: Exact active character cursor tracking.
-- **📼 Typed History Memory Tape**: Retains past word error history across space submissions, enabling smooth multi-word backspacing.
-- **⏱️ Duration Config**: Choose between `15s`, `30s`, and `60s` test modes.
-- **🏁 Results Screen**: Summary metric cards for Net WPM, Accuracy %, Raw CPM (Characters Per Minute), and Error count with a quick restart action.
+- ** Typed History Memory Tape**: Retains past word error history across space submissions, enabling smooth multi-word backspacing.
+- ** Duration Config**: Choose between `15s`, `30s`, and `60s` test modes.
+- ** Results Screen**: Summary metric cards for Net WPM, Accuracy %, Raw CPM (Characters Per Minute), and Error count with a quick restart action.
 
 ---
 
-## 🧮 Standard Typing Formulas
+##  Standard Typing Formulas
 
 - **Words Per Minute (WPM)**:
   $$\text{WPM} = \frac{(\text{Correct Characters} / 5)}{\text{Time Elapsed in Minutes}}$$
@@ -37,7 +37,7 @@
 
 ---
 
-## 🛠️ Architecture & Concepts Mastered
+##  Architecture & Concepts Mastered
 
 - **Framework**: Next.js App Router
 - **Component Separation**:
@@ -52,7 +52,7 @@
 
 ---
 
-## 💻 Getting Started Locally
+##  Getting Started Locally
 
 1. **Clone the repository**:
    ```bash
@@ -74,7 +74,7 @@
 
 ---
 
-## 👤 Author
+##  Author
 
 - **Richard** — [@OvatTheLegend](https://github.com/OvatTheLegend)
 - Student @ **FEI STU** (Slovak University of Technology in Bratislava)
